@@ -30,7 +30,24 @@
         <div id="content-grid"></div>
     </div>
 
-    <!-- Modal per dettagli serie -->
+    <!-- Modal per dettagli film/serie -->
+    <div id="details-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeDetailsModal()">×</button>
+            <div id="details-content">
+                <h2 id="details-title"></h2>
+                <img id="details-poster" alt="Poster">
+                <p id="details-overview"></p>
+                <p id="details-genres"></p>
+                <p id="details-release"></p>
+                <div id="details-cast"></div>
+                <div id="details-trailer"></div>
+                <button id="play-from-details">Riproduci</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal serie (già presente) -->
     <div id="series-modal" class="modal" style="display:none;">
         <div class="modal-content">
             <button class="close-modal" onclick="closeSeriesModal()">×</button>
