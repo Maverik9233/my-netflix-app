@@ -1,4 +1,4 @@
-const PLAYLISTS_URL = 'https://uc0a8c9a14febdb4f35ec29a436d.dl.dropboxusercontent.com/cd/0/inline/C7vU6SeEQWLbGUWWtgfDcstRU1_xNuEgZ11SWWhv5U7V2ydJ2ovFHYsEyyJ_wMTLNPX6KyQbjKZu2Iio3iV-0b6aUgwEyQmLaSiwgyqrxS9rSePRn9P7v6a-Fns0k8epxa6Lfq48nHTaae2sjr4FScr5/file#'; // ← SOSTITUISCI
+const PLAYLISTS_URL = 'https://github.com/Maverik9233/daddylive--player/raw/refs/heads/main/serietv.json'; // ← SOSTITUISCI
 const OMDB_API_KEY = 'http://www.omdbapi.com/?i=tt3896198&apikey=ebab3099';
 
 let allContent = [];          // per ricerca globale
