@@ -1,4 +1,4 @@
-const PLAYLISTS_URL = 'https://iptv-org.github.io/iptv/index.m3u'; // ← SOSTITUISCI
+const PLAYLISTS_URL = 'https://github.com/Maverik9233/my-netflix-app/raw/refs/heads/main/playlists.json'; // ← SOSTITUISCI
 const OMDB_API_KEY = 'http://www.omdbapi.com/?i=tt3896198&apikey=ebab3099';
 
 let allContent = [];          // per ricerca globale
