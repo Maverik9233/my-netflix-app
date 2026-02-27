@@ -1,4 +1,4 @@
-const PLAYLISTS_URL = 'https://dl.dropboxusercontent.com/s/INSERISCI_TUO_ID/playlists.json?dl=1'; // ← SOSTITUISCI
+const PLAYLISTS_URL = 'https://github.com/Maverik9233/daddylive--player/raw/refs/heads/main/serietv.json'; // ← SOSTITUISCI
 const OMDB_API_KEY = 'ebab3099';
 
 let allContent = [];          // per ricerca globale
