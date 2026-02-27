@@ -6,15 +6,15 @@
     <title>TorWatch Movies</title>
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.15"></script>
-    <meta name="theme-color" content="#001f3f">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <meta name="theme-color" content="#0a0e17">
     <link rel="icon" href="icon-192.png">
 </head>
 <body>
     <header>
         <h1 class="logo-text">TORWATCH<span>MOVIES</span></h1>
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Cerca film, serie, episodi..." autocomplete="off">
+            <input type="text" id="search-input" placeholder="Cerca film, serie..." autocomplete="off">
             <div id="search-results" class="search-dropdown"></div>
         </div>
     </header>
@@ -25,29 +25,26 @@
     </div>
     
     <div id="content-section" style="display:none;">
-        <button id="back-btn">← Torna alle collezioni</button>
+        <button id="back-btn">← Torna</button>
         <h2 id="current-list-name"></h2>
         <div id="content-grid"></div>
     </div>
 
-    <!-- Modal per dettagli film/serie -->
     <div id="details-modal" class="modal" style="display:none;">
         <div class="modal-content">
             <button class="close-modal" onclick="closeDetailsModal()">×</button>
             <div id="details-content">
                 <h2 id="details-title"></h2>
                 <img id="details-poster" alt="Poster">
-                <p id="details-overview"></p>
-                <p id="details-genres"></p>
-                <p id="details-release"></p>
-                <div id="details-cast"></div>
-                <div id="details-trailer"></div>
+                <p id="details-plot"></p>
+                <p id="details-info"></p>
+                <p id="details-rating"></p>
+                <p id="details-cast"></p>
                 <button id="play-from-details">Riproduci</button>
             </div>
         </div>
     </div>
 
-    <!-- Modal serie (già presente) -->
     <div id="series-modal" class="modal" style="display:none;">
         <div class="modal-content">
             <button class="close-modal" onclick="closeSeriesModal()">×</button>
@@ -66,7 +63,7 @@
     <script src="app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js').catch(err => console.error(err));
+            navigator.serviceWorker.register('/sw.js').catch(err => console.error('SW error:', err));
         }
     </script>
 </body>
