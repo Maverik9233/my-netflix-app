@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TorWatch Movies</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.15"></script>
+    <meta name="theme-color" content="#001f3f">
+    <link rel="icon" href="icon-192.png">
+</head>
+<body>
+    <header>
+        <h1 class="logo-text">TORWATCH<span>MOVIES</span></h1>
+    </header>
+    
+    <div id="playlists-section">
+        <h2>Scegli una collezione</h2>
+        <div id="playlists-grid"></div>
+    </div>
+    
+    <div id="content-section" style="display:none;">
+        <button id="back-btn">← Torna alle collezioni</button>
+        <h2 id="current-list-name"></h2>
+        <div id="content-grid"></div>
+    </div>
+
+    <div id="player-modal" class="modal">
+        <div class="player-container">
+            <video id="video-player" controls autoplay playsinline></video>
+            <button class="close-btn" onclick="closePlayer()">Chiudi ×</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .catch(err => console.error('SW error:', err));
+        }
+    </script>
+</body>
+</html>
