@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Film di Prova",
+    "url": "https://raw.githubusercontent.com/TUO_USERNAME/TUO_REPO/main/film-esempio.json?dl=1",
+    "type": "json"
+  },
+  {
+    "name": "Serie TV di Prova",
+    "url": "https://raw.githubusercontent.com/TUO_USERNAME/TUO_REPO/main/serie-esempio.json?dl=1",
+    "type": "json"
+  }
+]
