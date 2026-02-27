@@ -1,4 +1,4 @@
-const PLAYLISTS_URL = 'https://www.dropbox.com/scl/fi/fvxhrlm03y7yyyoaog7k2/Film-e-serie-TV.txt?rlkey=m41lwrfel59cydeh213i5wxu7&st=7iysx6ta&dl=1'; // ← SOSTITUISCI
+const PLAYLISTS_URL = 'https://www.dropbox.com/scl/fi/fvxhrlm03y7yyyoaog7k2/Film-e-serie-TV.txt?rlkey=m41lwrfel59cydeh213i5wxu7&st=7iysx6ta&raw=1'; // ← SOSTITUISCI
 const OMDB_API_KEY = 'http://www.omdbapi.com/?i=tt3896198&apikey=ebab3099';
 
 let allContent = [];          // per ricerca globale
