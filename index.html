@@ -13,6 +13,10 @@
 <body>
     <header>
         <h1 class="logo-text">TORWATCH<span>MOVIES</span></h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cerca film, serie, episodi..." autocomplete="off">
+            <div id="search-results" class="search-dropdown"></div>
+        </div>
     </header>
     
     <div id="playlists-section">
@@ -26,6 +30,15 @@
         <div id="content-grid"></div>
     </div>
 
+    <!-- Modal per dettagli serie -->
+    <div id="series-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeSeriesModal()">×</button>
+            <h2 id="series-title"></h2>
+            <div id="seasons-container"></div>
+        </div>
+    </div>
+
     <div id="player-modal" class="modal">
         <div class="player-container">
             <video id="video-player" controls autoplay playsinline></video>
@@ -36,8 +49,7 @@
     <script src="app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .catch(err => console.error('SW error:', err));
+            navigator.serviceWorker.register('/sw.js').catch(err => console.error(err));
         }
     </script>
 </body>
