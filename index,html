@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Netflix PWA</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> <!-- Per supportare HLS su tutti i browser -->
+</head>
+<body>
+    <header>
+        <h1>My Personal Streaming</h1>
+    </header>
+    <div id="content-grid"></div>
+    <div id="player-modal" class="modal">
+        <video id="video-player" controls></video>
+        <button onclick="closePlayer()">Chiudi</button>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>
